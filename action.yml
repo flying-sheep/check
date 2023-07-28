@@ -7,5 +7,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: exit ${{ fromJSON(inputs.success) && '0' || '1' }}.
+    - run: exit ${{ fromJSON(inputs.success) && '0' || '1' }}
       shell: bash
