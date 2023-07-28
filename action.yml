@@ -1,5 +1,9 @@
 name: "Check condition"
+author: Phil A.
 description: "Simply check if a condition is met"
+branding:
+  icon: check
+  color: purple
 inputs:
   success:
     description: "Succeed if 'true', fail if 'false'"
