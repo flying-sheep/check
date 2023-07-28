@@ -30,18 +30,18 @@ jobs:
           success: false
         continue-on-error: true
       - name: Integration test 4 check
-        run: if [[ ${{ steps.t4.outcome }} == 'failure' ]]; then exit 0; else exit 1
+        run: if [[ ${{ steps.t4.outcome }} == 'failure' ]]; then exit 0; else exit 1; fi
       - name: Integration test 5
         uses: ./
         with:
           success: "false"
         continue-on-error: true
       - name: Integration test 5 check
-        run: if [[ ${{ steps.t5.outcome }} == 'failure' ]]; then exit 0; else exit 1
+        run: if [[ ${{ steps.t5.outcome }} == 'failure' ]]; then exit 0; else exit 1; fi
       - name: Integration test 6
         uses: ./
         with:
           success: ${{ 'a' == 'b' }}
         continue-on-error: true
       - name: Integration test 6 check
-        run: if [[ ${{ steps.t6.outcome }} == 'failure' ]]; then exit 0; else exit 1
+        run: if [[ ${{ steps.t6.outcome }} == 'failure' ]]; then exit 0; else exit 1; fi
