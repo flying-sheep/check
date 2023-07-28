@@ -1,0 +1,11 @@
+name: 'Check condition'
+description: 'Simply check if a condition is met'
+inputs:
+  success:
+    description: "Succeed if 'true', fail if 'false'"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: exit ${{ fromJSON(inputs.success) && '0' || '1' }}.
+      shell: bash
