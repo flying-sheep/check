@@ -1,5 +1,5 @@
-name: 'Check condition'
-description: 'Simply check if a condition is met'
+name: "Check condition"
+description: "Simply check if a condition is met"
 inputs:
   success:
     description: "Succeed if 'true', fail if 'false'"

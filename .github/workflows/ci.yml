@@ -18,7 +18,7 @@ jobs:
       - name: Integration test 2
         uses: ./
         with:
-          condition: 'true'
+          condition: "true"
       - name: Integration test 2
         uses: ./
         with:
