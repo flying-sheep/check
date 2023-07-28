@@ -19,7 +19,7 @@ jobs:
         uses: ./
         with:
           success: "true"
-      - name: Integration test 2
+      - name: Integration test 3
         uses: ./
         with:
           success: ${{ 'a' == 'a' }}
