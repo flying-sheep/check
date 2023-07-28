@@ -32,6 +32,7 @@ jobs:
       - name: Integration test 4 check
         run: if [[ ${{ steps.t4.outcome }} == 'failure' ]]; then exit 0; else exit 1; fi
       - name: Integration test 5
+        id: t5
         uses: ./
         with:
           success: "false"
@@ -39,6 +40,7 @@ jobs:
       - name: Integration test 5 check
         run: if [[ ${{ steps.t5.outcome }} == 'failure' ]]; then exit 0; else exit 1; fi
       - name: Integration test 6
+        id: t6
         uses: ./
         with:
           success: ${{ 'a' == 'b' }}
