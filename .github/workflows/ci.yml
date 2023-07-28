@@ -1,4 +1,4 @@
-name: build
+name: Integration tests
 
 on:
   push:
@@ -14,12 +14,12 @@ jobs:
       - name: Integration test 1
         uses: ./
         with:
-          condition: true
+          success: true
       - name: Integration test 2
         uses: ./
         with:
-          condition: "true"
+          success: "true"
       - name: Integration test 2
         uses: ./
         with:
-          condition: ${{ 'a' == 'a' }}
+          success: ${{ 'a' == 'a' }}
