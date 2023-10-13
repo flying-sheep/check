@@ -11,7 +11,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: exit 
+    - run: exit
       uses: actions/github-script@v3
       with:
         script: |
