@@ -11,8 +11,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: exit
-      uses: actions/github-script@v3
+    - uses: actions/github-script@v3
       with:
         script: |
           if (!${{ inputs.success }}) {
