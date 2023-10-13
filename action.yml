@@ -11,5 +11,10 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: exit ${{ fromJSON(inputs.success) && '0' || '1' }}
-      shell: bash
+    - run: exit 
+      uses: actions/github-script@v3
+      with:
+        script: |
+          if (!${{ inputs.success }}) {
+            core.setFailed('Check failed')
+          }
