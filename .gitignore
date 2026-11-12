@@ -1,0 +1,2 @@
+# prettier’s cache (pre-commit hook)
+node_modules/
